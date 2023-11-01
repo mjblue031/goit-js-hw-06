@@ -7,11 +7,14 @@ logInForm.addEventListener("submit", (eve) => {
     const eMail = formLogIn.elements.email.value;
     const pWord = formLogIn.elements.password.value;
 
-    console.log(eMail);
-
     if(eMail === "" || pWord === ""){
         return console.log("All fields must be filled in");
     }
-    console.log(`Email: ${eMail}, Password: ${pWord}`);
+
+    const objData = {
+        email: eMail.value,
+        password: pWord.value,
+    };
+    console.log(objData);
     formLogIn.reset();
 });

@@ -4,13 +4,13 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
+let begWidht = 30;
+let begHeight = 30;
+
 function createBoxes(amount) {
   let boxes = document.querySelector("#boxes");
-  boxes.innerHTML = "";
-
+  
   let i = 0;
-  let begWidht = 30;
-  let begHeight = 30;
 
   for (i = 1; i <= amount; i += 1) {
     const box = document.createElement("div");
@@ -26,6 +26,9 @@ function createBoxes(amount) {
 
 function destroyBoxes() {
   let boxes = document.querySelector("#boxes");
+  document.querySelector("#inputAmt").value = 0;
+  begHeight = 30;
+  begWidht = 30;
   boxes.innerHTML = "";
 }
 
