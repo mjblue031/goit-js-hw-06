@@ -12,8 +12,8 @@ logInForm.addEventListener("submit", (eve) => {
     }
 
     const objData = {
-        email: eMail.value,
-        password: pWord.value,
+        email: eMail,
+        password: pWord,
     };
     console.log(objData);
     formLogIn.reset();
